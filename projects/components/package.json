@@ -4,7 +4,8 @@
   "description": "Bouygues Design System - Masoni components library",
   "peerDependencies": {
     "@angular/common": "^15.2.0",
-    "@angular/core": "^15.2.0"
+    "@angular/core": "^15.2.0",
+    "@masoni/icons": "file:../icons"
   },
   "homepage": "https://github.com/bouygues-construction/design-system-bycn",
   "keywords": [
@@ -20,5 +21,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+    "@masoni/css-sub-elements": "file:../css/src/components/sub-elements",
+    "@masoni/css-text-input": "file:../css/src/components/text-input"
+  }
 }
