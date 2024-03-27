@@ -1,23 +1,22 @@
 import type { StorybookConfig } from '@storybook/angular';
+
 const config: StorybookConfig = {
   stories: [
      '../stories/overview.stories.mdx',
+     '../stories/**/*.@(mdx)',
     '../stories/**/*.stories.@(ts|tsx|mdx)',
+    '../stories/**/reactive-form/*.stories.ts',
+    '../stories/**/alert-service/*.stories.ts',
+    '../stories/**/toast-service/*.stories.ts',
   ],
   addons: [
     '@storybook/addon-links',
+    '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-actions',
     {
       name: '@storybook/addon-styling',
       options: {
         cssModules: true,
-      },
-    },
-    {
-      name: '@storybook/addon-essentials',
-      options: {
-        actions: false, // Disable comment extraction for actions addon
       },
     },
   ],
@@ -27,7 +26,8 @@ const config: StorybookConfig = {
     options: {},
   },
   docs: {
-    autodocs: 'tag',
+    autodocs: true,
+    defaultName: 'Documentation',
   },
 };
 export default config;
